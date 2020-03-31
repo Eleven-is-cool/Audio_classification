@@ -7,8 +7,6 @@ from keras import Sequential
 from keras.utils import to_categorical
 from keras.layers import Dense
 from sklearn.model_selection import train_test_split
-from keras.models import load_model
-import yaml
 
 DATA = 'data.npy'
 TARGET = 'target.npy'
@@ -89,22 +87,6 @@ def main():
     # model.save_weights('model_weights.h5')
 
     model.save('model.h5')
-
-
-    # 测试
-    Path1 = r"F:\code\Audio_classification\dataBase\UrbanSound8K_byclass\others\6988-5-0-1.wav"  # others car
-    text(Path1, model)
-    Path2 = r"F:\code\Audio_classification\dataBase\UrbanSound8K_byclass\others\14527-9-0-5.wav"  # others music
-    text(Path2, model)
-    Path3 = r"F:\code\Audio_classification\dataBase\UrbanSound8K_byclass\others\21187-5-0-0.wav"  # others noise
-    text(Path3, model)
-    Path4 = r"F:\code\Audio_classification\dataBase\UrbanSound8K_byclass\person\9223-2-0-9.wav"  # person child
-    text(Path4, model)
-    Path5 = r"F:\code\Audio_classification\dataBase\UrbanSound8K_byclass\person\common_voice_zh-CN_19876447.wav"  # person male
-    text(Path5, model)
-    Path6 = r"F:\code\Audio_classification\dataBase\UrbanSound8K_byclass\person\common_voice_zh-CN_20225690.wav"  # person male
-    text(Path6, model)
-
     # 画图
     plot_history(history)
 
@@ -115,21 +97,21 @@ def main():
 
 
 # 测试
-def text(Path, model):
-    wavs = []
-    wavs.append(wav2mfcc(Path, 11))
-    X = np.array(wavs)
-    X = X.reshape(-1, 220)
-    print(X.shape)
-    result = model.predict(X[0:1])[0]
-    print("识别结果", result)
-    #  因为在训练的时候，标签集的名字 为：  0：seven   1：stop    0 和 1 是下标
-    name = ["others", "person"]  # 创建一个跟训练时一样的标签集
-    ind = 0  # 结果中最大的一个数
-    for i in range(len(result)):
-        if result[i] > result[ind]:
-            ind = 1
-    print("识别的语音结果是：", name[ind])
+# def text(Path, model):
+#     wavs = []
+#     wavs.append(wav2mfcc(Path, 11))
+#     X = np.array(wavs)
+#     X = X.reshape(-1, 220)
+#     print(X.shape)
+#     result = model.predict(X[0:1])[0]
+#     print("识别结果", result)
+#     #  因为在训练的时候，标签集的名字 为：  0：seven   1：stop    0 和 1 是下标
+#     name = ["others", "person"]  # 创建一个跟训练时一样的标签集
+#     ind = 0  # 结果中最大的一个数
+#     for i in range(len(result)):
+#         if result[i] > result[ind]:
+#             ind = 1
+#     print("识别的语音结果是：", name[ind])
 
 
 def plot_history(history):
