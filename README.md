@@ -29,5 +29,14 @@ The project is to classify audio
 2. 保存模型。[模型下载](https://github.com/Eleven-is-cool/Audio_classification/blob/master/Data/model.h5)
 3. 模型预测。[预测代码](https://github.com/Eleven-is-cool/Audio_classification/blob/master/Data/test.py)
 
+## 2020.4.3
 
+1. 分割音频。[核心代码](https://github.com/Eleven-is-cool/Audio_classification/blob/master/Data/cutwav.py)
+2. 下载Audacity录屏软件，该软件也可以生成指定音频。[下载Audacity](https://www.audacityteam.org/)
+3. 将一些音频分割成一两秒，经过模型测试，不满足预期。
+
+### 2020.4.4
+
+1. 分割训练集，初步猜想是因为训练集每段时间太长，将训练集分成2s一段，进行训练，得到的模型不能识别静音文件。
+2. 用Audacity生成两个小时的静音文件，分割成2s一段放进训练集的others文件夹，重新训练，模型应用效果有待测试。
 
