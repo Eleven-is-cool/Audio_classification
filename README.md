@@ -42,5 +42,5 @@ The project is to classify audio
 
 ## 2020.4.8
 
-1. 音频降噪
+1. 音频降噪[代码] (https://github.com/Eleven-is-cool/Audio_classification/tree/master/Enhance_speach)
 2. 导入音频显示波形图
