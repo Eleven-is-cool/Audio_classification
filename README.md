@@ -42,9 +42,14 @@ The project is to classify audio
 
 ## 2020.4.8
 
-1. 音频降噪[代码](https://github.com/Eleven-is-cool/Audio_classification/tree/master/Enhance_speach)
-2. 导入音频显示波形图
+1. 音频降噪。  [代码](https://github.com/Eleven-is-cool/Audio_classification/tree/master/Enhance_speach)
+2. 导入音频显示波形图。[代码](https://github.com/Eleven-is-cool/Audio_classification/blob/master/Data/Merge.py)
 
 ## 2020.4.9
 
-1.合并音频
+1. 合并音频。
+
+## 2020.4.11
+
+1. 初次将降噪，切割，识别结合在一起。[Package文件夹](https://github.com/Eleven-is-cool/Audio_classification/tree/master/Package)
+
