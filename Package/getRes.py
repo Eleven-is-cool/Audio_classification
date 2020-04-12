@@ -72,19 +72,19 @@ def cut(main_wav_path):
     begin = 0
     end = int(time) * 1000
     # 循环切割
-    while begin <= end:
+    while begin < end:
         # 保存出来的目的路径
         part_wav_path = "temp/temp"+str(begin)+".wav"
         # 因为是一秒一秒的分，为了得到完整的音频，即7.2s这种情况，加到7s的时候，要将剩下的200ms也取出来，所以在这里分开讨论
-        if begin == end:
-            start_time = begin
-            end_time = mstime
-            getEachWav(main_wav_path, start_time, end_time, part_wav_path)
-
-        else:
-            start_time = begin
-            end_time = begin+1000
-            getEachWav(main_wav_path, start_time, end_time, part_wav_path)
+        # if begin == end:
+        #     start_time = begin
+        #     end_time = mstime
+        #     getEachWav(main_wav_path, start_time, end_time, part_wav_path)
+        #
+        # else:
+        start_time = begin
+        end_time = begin+1000
+        getEachWav(main_wav_path, start_time, end_time, part_wav_path)
 
         begin += 1000
 
