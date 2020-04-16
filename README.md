@@ -53,3 +53,8 @@ The project is to classify audio
 
 1. 初次将降噪，切割，识别结合在一起。[Package文件夹](https://github.com/Eleven-is-cool/Audio_classification/tree/master/Package)
 
+## 2020.4.16
+
+1. 改写合并音频代码，使其可以根据返回的列表合并音频
+2. 编写导入导出音频的格式转换，暂时支持MP3、ogg、wav格式
+3. 增加麦克风录入功能，用户可直接录入音频
