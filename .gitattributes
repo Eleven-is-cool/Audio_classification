@@ -58,3 +58,4 @@
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
 Package/getClassifyRes_exe/__init__.exe filter=lfs diff=lfs merge=lfs -text
+Package/getClassifyRes_exe/ filter=lfs diff=lfs merge=lfs -text
