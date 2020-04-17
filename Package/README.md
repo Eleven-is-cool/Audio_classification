@@ -1,6 +1,6 @@
 # getClassifyRes_exe
 
-此文件夹为打包后的exe可执行文件，将这个文件夹下的文件都放到debug目录下，以下是c# winform调用的例子。
+此文件夹为打包后的exe可执行文件，将这个文件夹下的文件都放到debug目录下并创建名为temp和highMass的文件夹，以下是c# winform调用的例子。
 
 ```c#
             //Debug目录下建立temp和highMass文件夹
@@ -22,7 +22,7 @@
 
 
 
-# getClassifyRes_exe
+# Merge_exe
 
 目录文件夹下需要有temp文件夹里面存放分割的音频，是需要和getClassifyRes配合使用的。
 

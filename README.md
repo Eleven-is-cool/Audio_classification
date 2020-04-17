@@ -51,10 +51,15 @@ The project is to classify audio
 
 ## 2020.4.11
 
-1. 初次将降噪，切割，识别结合在一起。[Package文件夹](https://github.com/Eleven-is-cool/Audio_classification/tree/master/Package)
+1. ~~初次将降噪，切割，识别结合在一起。[Package文件夹](https://github.com/Eleven-is-cool/Audio_classification/tree/master/Package)~~
 
 ## 2020.4.16
 
 1. 改写合并音频代码，使其可以根据返回的列表合并音频
 2. 编写导入导出音频的格式转换，暂时支持MP3、ogg、wav格式
 3. 增加麦克风录入功能，用户可直接录入音频
+
+## 2020.4.17
+
+1. 将目前实现的模块打包。 [Package文件夹](https://github.com/Eleven-is-cool/Audio_classification/tree/master/Package) 
+2. 实现web api，可以部署到服务器，但是识别前得先要把 [文件上传](https://github.com/Eleven-is-cool/Audio_classification/blob/master/API/uploadFile.py) 到服务器，这也就导致了只能应用于识别短时音频。[API](https://github.com/Eleven-is-cool/Audio_classification/tree/master/API)
