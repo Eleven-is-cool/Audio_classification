@@ -41,3 +41,26 @@ c# winform调用同理，有多个接收参数的情况下，Arguments中多个�
 
 将同级目录下的highMass和temp里面的文件清空，可以在载入文件前执行此脚本。
 
+
+
+# cutWavByUser_exe
+
+传进四个参数，第一个参数是接受处理音频的路径，第二个是开始秒数，第三个是结束时间，第四个是保存的路径。
+c# 调用
+
+```c#
+            //切割
+            ProcessStartInfo myStartInfo = new ProcessStartInfo();
+            myStartInfo.FileName = Application.StartupPath + @"\cutwav.exe";
+            myStartInfo.Arguments = "F:/code/Audio_classification/dataBase/UrbanSound8K_byclass/person/A2_1.wav " +
+                "2 8 F:/code/Audio_classification/stupid.wav";
+            myStartInfo.UseShellExecute = false;//不打开控制台窗口
+            myStartInfo.CreateNoWindow = true;// 不打开控制台窗口
+            myStartInfo.RedirectStandardOutput = false;//输出参数设定
+            Process myProcess = new Process();
+            myProcess.StartInfo = myStartInfo;
+
+            myProcess.Start();
+            myProcess.WaitForExit();
+```
+
