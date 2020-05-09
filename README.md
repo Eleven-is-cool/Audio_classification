@@ -63,3 +63,19 @@ The project is to classify audio
 
 1. 将目前实现的模块打包。 [Package文件夹](https://github.com/Eleven-is-cool/Audio_classification/tree/master/Package) 
 2. 实现web api，可以部署到服务器，但是识别前得先要把 [文件上传](https://github.com/Eleven-is-cool/Audio_classification/blob/master/API/uploadFile.py) 到服务器，这也就导致了只能应用于识别短时音频。[API](https://github.com/Eleven-is-cool/Audio_classification/tree/master/API)
+
+## 2020.4.28
+
+1. 修改训练集：在others中加入大自然相关音频的数据集进行训练，得到model0428.h5
+
+##  2020.5.1
+
+1. 音频分类加载模型更改为REST API的形式，后面识别通过get请求访问本机的API来获取识别结果。
+2. 修改多音频文件识别出错的问题。
+3. 修改训练集，将others中的无声音频改为1s。
+4. 将语音识别更改为REST API的形式打包，后面识别通过get请求访问本机的API来获取识别结果。
+
+## 2020.5.4
+
+1. 清洗数据集，将数据集采样率全部改成22050HZ
+2. 重新训练模型，之前模型并不能用于实际应用中。
