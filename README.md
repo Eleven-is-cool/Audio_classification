@@ -4,8 +4,10 @@ The project is to classify audio
 ## 数据集
 [数据集](https://pan.bnuz.edu.cn/l/b1kxKb)
 训练集来自urbanSound8k数据集，清华大学thchs-30普通话语音，Audacity生成的音频，csdn上有关环境的音频与自己录制的音频，最终数据集大小为10G左右，人声和其他声音的音频占比一致。
-需要对数据集音频进行切割，转化为统一采样率。
+需要对数据集音频进行切割，转化为统一采样率。   
+
 分割音频。[核心代码](https://github.com/Eleven-is-cool/Audio_classification/blob/master/Data/cutwav.py)
+
 > librosa库请使用版本不要过高，本次训练用的librosa版本是0.6.0 
 
 ## 模型训练
